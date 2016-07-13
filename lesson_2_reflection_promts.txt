@@ -9,6 +9,11 @@ Staging area is the equivalent of a <change list>. It groups the working files t
 
 How can you use the staging area to make sure you have one commit per logical
 change?
+Treat the staging area as a 'change list' or 'task' with just the files related to that logical delta.
+Note that:
+ git diff shows the differences between the working files and the staging area
+ git diff --staged shows the diffs between the staging area and the current HEAD of the repo
+ git reset --hard reverts all changes so that they match the HEAD of the repo (use with care!!)
 
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
