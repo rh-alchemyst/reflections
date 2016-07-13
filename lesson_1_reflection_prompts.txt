@@ -1,0 +1,45 @@
+How did viewing a diff between two versions of a file help you see the bug that
+was introduced?
+
+    Highlights differences automatically, which should help focus the search for changes which have been made and so likely causes of bugs or feature changes.
+    Interesting to note that fc is the Windows equivalent of diff (not sure I knew that before)
+
+How could having easy access to the entire history of a file make you a more
+efficient programmer in the long term?
+
+    Version control allows immediate changes to be identified, branches of different
+    versions of files maintained, sand-box changes and then revert them, 
+    allows multiple folks to work on a single file at the same time and later merge changes
+
+What do you think are the pros and cons of manually choosing when to create a
+commit, like you do in Git, vs having versions automatically saved, like Google
+docs does?
+
+    Clearly user needs to decide when to commit a change, however, the editor should be making
+     regular backups (too) in case of faiures in the filing system etc. However, these latter
+      versions are just local copies and not committed to the SCM system
+
+Why do you think some version control systems, like Git, allow saving multiple
+files in one commit, while others, like Google Docs, treat each file separately?
+
+    Useful to group multiple files within one commit when logically they all change due to the same reason:
+    bug fix, new feature, modification etc 
+
+How can you use the commands git log and git diff to view the history of files?
+
+    git log --stat 
+    This is useful to summarise each change because it lists the number of lines added or deleted
+    Note that the commit ID starts as the first thing annd is followed by author details etc
+    Using git diff <old> <new>
+    Helpful to colour in the changes (defaults to green for additions and red for deletions)
+    git config --global color.ui auto (actually this seems to be the default already)
+
+How might using version control make you more confident to make changes that
+could break something?
+
+    Because you can always revert to the previous commit and your changes don't impact anyone else.
+    Unless you committed your changes as you went along I suppose. Then you've got your own branch...
+
+Now that you have your workspace set up, what do you want to try using Git for?
+
+    It will be useful to explore repos stored for the deep-learnig course
