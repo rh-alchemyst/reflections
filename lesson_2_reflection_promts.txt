@@ -17,12 +17,38 @@ Note that:
 
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
+git branch - lists the branches
+git branch <name> - creates a new branch
+git checkout <name> - checks out that branch 
+or combining these last 2 cmds
+	git checkout -b <name>
+Branches can be viewed as labels or a snapshot of the files at a current point in time.
+It is good practice to create a branch for any work contexts you might want to switch between
+or even for every piece of work you are doing.
+Are they permanent enough in the tool to be used for releasing ?
 
 How do the diagrams help you visualize the branch structure?
+git log --graph --oneline <branch list>
+Shows a simplistic diagram of commits for the listed branches, so you can view the reachability and 
+interconnectedness of the changes
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
+	Merging a branch into the current one, uses the git merge <branch id> cmd
+	This seeks for a common ancestor and automatically implements the independent changes made 
+	in the specified <branches> into the current one.
+	Note that the git log will then reference back to the dependent commits in timestamp order, so need
+	to use git log --graph --oneline to see them sorted by branch. Also use git show <commit_id> to see the 
+	changes made since the parent of the specified commit_id
+	NOTE that you can delete a branch once merged (removes the label info) using 
+		git branch -d <branch_id>
 
-What are the pros and cons of Gitâ€™s automatic merging vs. always doing merges
+What are the pros and cons of Git's automatic merging vs. always doing merges
 manually?
+	git nerge will automatically merge independent changes, but will leave files with conflicts in
+	a marked-up state showing the current branch, ancestor and new branch versions. These need to be manually
+	reviewed and resolved and then git add <conflicted_file> and finally manually committed git commit.
+	The final commit will add these resolved files to the merge commit so everything is committed together
+	You probably wouldn't want to try and do this manually as there are likely to be too many changes.
+	HOwever, it seems a bit clunky, in that manual merges have to remove all the added markup too ?! 
 
