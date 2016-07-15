@@ -6,25 +6,33 @@ local?
 Why might you want to always pull changes manually rather than having Git
 automatically stay up-to-date with your remote repository?
 
-    Fill in your answer here
+    Need to work locally with a stable baseline otherwise unrelated but conflicting changes will 
+    conflict with your own work
 
 Describe the differences between forks, clones, and branches.  When would you
 use one instead of another?
 
-    Fill in your answer here
+    Branch is a label idetifying a distinct variant of the code base
+    Clone is a copy of a whole repo (including all its various branches) - could be from a server or a local repo
+    Fork is a GitHub based clone of a repo (only on the server)
 
 What is the benefit of having a copy of the last known state of the remote
 stored locally?
 
-    Fill in your answer here
+    Last known state is stored in a local branch called origin/master (and is set by the pulls and pushes to remote)
+    Useful to see how the local code has diverged from the remote, as a result of changes made locally or remotely
 
 How would you collaborate without using Git or GitHub?  What would be easier,
 and what would be harder?
 
-    Fill in your answer here
+    If you are co-located then it wuld be easy to discuss changes and coordinate updates, however, as the number of changes increases
+    it would become more complex to manage. Github pull requests seem good in that they seem to have an assignee (not mentioned in course) so multiple people working on multiple changes can all operate together in a tracked way. Also, the great advantage is that folks do NOT need
+    to be in the same place, so Git/hub supports distributed working really well.
 
 When would you want to make changes in a separate branch rather than directly in
 master?  What benefits does each approach have?
 
-    Fill in your answer here
+    Branches are good for complex changes that might require multiple commits and take a period of time. If they can be 
+    developed independently of other changes being made at the same time so much the better. Also, they isolate the changes so that 
+    multiple features can be added in a controlled fashion back into master, supporting feature dev workflow.
 
